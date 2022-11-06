@@ -8,7 +8,7 @@ def g(x):
 
 def puntofijo(x0,tol,nmax):
     xant=x0
-    e=1000
+    e=tol+1
     contador=0
 
     while (tol<e and contador<=nmax):

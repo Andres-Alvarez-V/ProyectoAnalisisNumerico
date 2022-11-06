@@ -1,6 +1,18 @@
 import numpy as np
 
+# %Este programa encuentra un intervalo donde f(x) tiene cambio de signo
+# %usando el método de búsquedas incrementales
 
+# %Entradas: 
+# %f, función continua
+# %x0, punto inicial
+# %h, paso
+# %Nmax, número máximo de iteraciones
+
+# %Salidas
+# %a, extremo izquierdo del intervalo
+# %b, extremo derecho del intervalo
+# %iter, número de iteraciones
 
 def funcion(x):
     #f=((x)**3)-(7.51*(x)**2)+(18.4239*(x))-14.8331

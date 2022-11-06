@@ -9,7 +9,7 @@ def g(x):
     #f=np.exp(-x)
     return f
 
-def puntofijo(x0,tol,niter):
+def newton(x0,tol,niter):
     fx=f(x0)
     dfx=g(x0)
     cont=0
@@ -17,12 +17,12 @@ def puntofijo(x0,tol,niter):
     while error >tol and fx!= 0 and dfx!=0 and cont<niter:
         x1=x0-(fx/dfx)
         fx=f(x1)
-        print(abs(fx))
+        # print(abs(fx))
         dfx=g(x1)
         error=abs(x1-x0)
         x0=x1
         cont+=1
-        print(x0)
+        # print(x0)
     if fx==0:
         print(x0," es raiz ")
     elif error<tol:
@@ -36,7 +36,7 @@ def main():
     x0=float(input("X0 "))
     tol=float(input("Tol "))
     nmax=int(input("niter "))
-    puntofijo(x0,tol,nmax)
+    newton(x0,tol,nmax)
 
 if __name__ == '__main__':
     main()

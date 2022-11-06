@@ -12,11 +12,11 @@ def main():
     fxi=f(xi)
     fxs=f(xs)
     if fxi==0:
-        print(x1,"es raiz")
+        print(xi,"es raiz")
     elif fxs==0:
         print(xs,"es raiz")
     elif fxi*fxs<0:
-        xm=xi-(fxi*(xs)/2
+        xm=xi-((fxi*(xs-xi))/(fxs-fxi))
         fxm=f(xm)
         cont=1
         error=tol+1
@@ -24,18 +24,18 @@ def main():
             if fxi*fxm<0:
                 xs=xm
                 fxs=fxm
-                print("fxs = ",fxs,"----- Derecha")
-                print("xs = ",xi)
-                print("   ")
+                # print("fxs = ",fxs,"----- Derecha")
+                # print("xs = ",xi)
+                # print("   ")
 
             else:
                 xi=xm
                 fxi=fxm
-                print("fxi = ",fxm,"------- izquierda")
-                print("xi = ",xi)
-                print("   ")
+                # print("fxi = ",fxm,"------- izquierda")
+                # print("xi = ",xi)
+                # print("   ")
             xaux=xm
-            xm=(xi+xs)/2
+            xm=xi-((fxi*(xs-xi))/(fxs-fxi))
             fxm=f(xm)
             error=abs(xm-xaux)
             cont+=1
