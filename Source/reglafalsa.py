@@ -1,10 +1,4 @@
-def f(x):
-    f=((x)**3)-(7.51*(x)**2)+(18.4239*(x))-14.8331
-#    f=90*(x+40)*(x+27)*(x+95)-50000000
-    return f
-
-
-def main():
+def reglafalsa(f):
     xi=float(input("Xi= "))
     xs=float(input("Xs= "))
     tol=float(input("Tol= "))
@@ -48,7 +42,3 @@ def main():
     else:
         print("El intervalo es inadecuado")
 
-
-if __name__=="__main__":
-    main()
- 

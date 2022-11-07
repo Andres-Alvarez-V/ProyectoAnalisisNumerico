@@ -1,12 +1,11 @@
 import numpy as np
 
 
-def g(x):
-    f=np.log((x**2)-(2*x)+2)
-    #f=np.exp(-x)
-    return f
 
-def puntofijo(x0,tol,nmax):
+def puntofijo(g):
+    x0=float(input("Ingrese x inicial "))
+    tol=float(input("Ingrese la tolerancia "))
+    nmax=int(input("Ingrese el número máximo de iteraciones "))
     xant=x0
     e=tol+1
     contador=0
@@ -21,13 +20,3 @@ def puntofijo(x0,tol,nmax):
         print("no pudimos llegar a esa tolerancia con ",contador,"iteraciones")
     else:
         print("hubo ",contador," iteraciones y la raiz se encuentra en ",xant," con un error de ", e)
-
-
-def main():
-    tol=float(input("¿qué tolerancia necesitas? "))
-    x0=float(input("¿en qué valor deseas iniciar? "))
-    nmax=int(input("¿cuál es el número máximo de iteraciones permitidas? "))
-    puntofijo(x0,tol,nmax)
-
-if __name__ == '__main__':
-    main()

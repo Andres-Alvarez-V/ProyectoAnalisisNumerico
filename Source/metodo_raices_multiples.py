@@ -12,37 +12,26 @@
 # x, solución
 # iter, número de iteraciones
 # err, error
-
-def fun(x):
-    pass
-
-def df(x):
-    pass
-
-def d2f(x):
-    pass
-
-x0 = float(input("Aproximacion inicial x0: "))
-tol = float(input("Tolerancia: "))
-nmax = int(input("Numero de iteracciones maximas: "))
+def raices_multiples(fun,df,d2f):
+    x0 = float(input("Aproximacion inicial x0: "))
+    tol = float(input("Tolerancia: "))
+    nmax = int(input("Numero de iteracciones maximas: "))
 
 
-xant = x0
-fant = fun(xant)
-E = 1000
-cont = 0
+    xant = x0
+    fant = fun(xant)
+    E = 1000
+    cont = 0
 
-while(E > tol and cont < nmax):
-    xact = xant - fant*df(xant)/( ((df(xant))**2) - fant*d2f(xant)) 
-    fact = fun(xact)
-    E = abs(xact - xant)
-    cont += 1
-    xant = xact
-    fant =fact
-    
-x = xact
-iter = cont
-err = E
+    while(E > tol and cont < nmax):
+        xact = xant - fant*df(xant)/( ((df(xant))**2) - fant*d2f(xant)) 
+        fact = fun(xact)
+        E = abs(xact - xant)
+        cont += 1
+        xant = xact
+        fant =fact
+    x = xact
+    iter = cont
+    err = E
 
-print(f"Resutado -> {x} \nIteracio: {iter}\nError: {err}")
-    
+    print(f"Resutado -> {x} \nIteracio: {iter}\nError: {err}")

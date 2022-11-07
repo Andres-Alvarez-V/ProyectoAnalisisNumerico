@@ -1,15 +1,8 @@
 import numpy as np
-
-def f(x):
-    f=np.exp(2*x)-np.exp(x)-2
-    return f
-def g(x):
-    f=2*np.exp(2*x)-np.exp(x)
-    #f=-np.exp(-x)-1
-    #f=np.exp(-x)
-    return f
-
-def newton(x0,tol,niter):
+def newton(f,g):
+    x0=float(input("Ingrese x inicial "))
+    tol=float(input("Ingrese la tolerancia "))
+    niter=int(input("Ingrese el número máximo de iteraciones "))
     fx=f(x0)
     dfx=g(x0)
     cont=0

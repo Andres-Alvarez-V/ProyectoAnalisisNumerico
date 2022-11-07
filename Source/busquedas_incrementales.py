@@ -14,17 +14,11 @@ import numpy as np
 # %b, extremo derecho del intervalo
 # %iter, número de iteraciones
 
-def funcion(x):
-    #f=((x)**3)-(7.51*(x)**2)+(18.4239*(x))-14.8331
-    f=(1/x)+(0.4)-(1.74*np.log(20*np.sqrt(x)))
-#    f=90*(x+40)*(x+27)*(x+95)-50000000
 
-    return f
-
-def main():
-    xi=float(input("Xi= "))
-    deltax=float(input("Delta x= "))
-    itemax=float(input("Itemax= "))
+def busquedas(f):
+    xi=float(input("Ingrese x inicial= "))
+    deltax=float(input("Ingrese delta x= "))
+    itemax=float(input("Ingrese N iteraciones máximas= "))
     fi=funcion(xi)
     xf=xi+deltax
     ff=funcion(xf)
@@ -42,5 +36,3 @@ def main():
 
     else:
         print( "No llegamos" )
-if __name__=="__main__":
-    main()
