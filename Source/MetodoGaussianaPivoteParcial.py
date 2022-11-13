@@ -1,13 +1,4 @@
-# %Entradas: 
-# %A, matrix invertible
-# %b, vector constante
 
-# %Salidas
-# %x, soluci�n
-
-# Método de Gauss
-# Solución a Sistemas de Ecuaciones
-# de la forma A.X=B
 
 import numpy as np
 def pivoteo_parcial(A,B):
@@ -66,11 +57,11 @@ def pivoteo_parcial(A,B):
 
 
     # SALIDA
-    print('Matriz aumentada:')
+    print('Expanded matrix:')
     print(AB0)
-    print('Pivoteo parcial por filas')
+    print('For rows')
     print(AB1)
-    print('eliminación hacia adelante')
+    print('Forward elimination')
     print(AB)
-    print('solución: ')
+    print('Solution: ')
     print(X)
