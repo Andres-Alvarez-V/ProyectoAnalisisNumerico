@@ -33,7 +33,6 @@ def gauss_seidel(A,B,X0):
         X=0
     verifica = np.dot(A,X)
 
-    # SALIDA
     print('X: ')
     print(X)
     print('verify A.X=B: ')
