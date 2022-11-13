@@ -1,13 +1,3 @@
-# %Entradas: 
-# %A, matrix invertible
-# %b, vector constante
-
-# %Salidas
-# %x, soluci�n
-
-# Método de Gauss
-# Solución a Sistemas de Ecuaciones
-# de la forma A.X=B
 
 import numpy as np
 def gaussiana_simple(A,B):
@@ -48,7 +38,7 @@ def gaussiana_simple(A,B):
     X = np.transpose([X])
 
 
-    print("Matriz resultante AB: ")
+    print("AB: ")
     print(AB)
-    print("SOlucion:")
+    print("Solution:")
     print(X)
