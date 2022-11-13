@@ -6,16 +6,16 @@ import numpy as np
 
 
 def biseccion(f):
-    xi=float(input("Ingrese X izquierdo= "))
-    xs=float(input("Ingrese X derecho= "))
-    tol=float(input("Ingrese la Tolerancia= "))
-    niter=float(input("Ingrese Numero de Iteraciones= "))
+    xi=float(input("Left x= "))
+    xs=float(input("Right x= "))
+    tol=float(input("Tolerance= "))
+    niter=float(input("Max iterations= "))
     fxi=f(xi)
     fxs=f(xs)
     if fxi==0:
-        print(xi,"es raiz")
+        print(xi,"is root")
     elif fxs==0:
-        print(xs,"es raiz")
+        print(xs,"is root")
     elif fxi*fxs<0:
         xm=(xi+xs)/2
         fxm=f(xm)
@@ -27,7 +27,7 @@ def biseccion(f):
                 xs=xm
                 fxs=fxm
                 print("error",error)
-                print("fxs = ",fxs,"----- Derecha")
+                print("fxs = ",fxs,"----- Right")
                 print("xs = ",xi)
                 print("   ")
 
@@ -35,7 +35,7 @@ def biseccion(f):
                 xi=xm
                 fxi=fxm
                 print("error",error)
-                print("fxi = ",fxm,"------- izquierda")
+                print("fxi = ",fxm,"------- Left")
                 print("xi = ",xi)
                 print("   ")
             xaux=xm
@@ -44,12 +44,12 @@ def biseccion(f):
             error=abs(xm-xaux)
             cont+=1
         if fxm==0:
-            print(xm ,"es raiz")
+            print(xm ,"is root")
         elif error<tol:
-            print(xm,"es una aproximacion con tolerancia =",tol)
+            print(xm,"eits an approximation with tolerance =",tol)
         else:
-            print("fracaso en ",niter,"iteraciones")
+            print("Fail in ",niter,"iterations")
     else:
-        print("El intervalo es inadecuado")
+        print("The interval is not right")
 
 
