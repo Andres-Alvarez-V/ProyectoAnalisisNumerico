@@ -14,8 +14,8 @@
 # Método iterativo Jacobbi Matriz de coeficientes de entrada A, matriz de valores b, número de iteración n, error c (la matriz de lista es la preferida por la matriz de simulación de lista)
 
 def Jacobi(A,b,n=100,c=0.0001, x = None):
-    n=int(input("ingrese número máximo de iteraciones"))
-    c=float(input("Ingrese el error permitido"))
+    n=int(input("Max iterations "))
+    c=float(input("Tolerance "))
     nx = []
     count = 0 #Cuenta el número de iteraciones
     lc = []
