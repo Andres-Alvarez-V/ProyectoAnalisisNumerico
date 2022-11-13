@@ -39,10 +39,10 @@ def cholesky(A,b):
     Z = np.linalg.solve(L, b)
     x = np.linalg.solve(U, Z)
 
-    print("Matriz L")
+    print("Matrix L")
     print(L)
-    print("Matriz U")
+    print("Matrix U")
     print(U)
-    print("Solucion")
+    print("Solution")
     print(x)
     return L,U,x
