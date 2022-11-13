@@ -17,7 +17,7 @@ def vandermonde(X,Y):
             contador+=inversa[i,j]*Y[j]
         coef.append(contador)
 
-    frase="el polinomio que representa esta función es "
+    frase="The polynomial is "
     for i in range(len(coef)):
             if i==0:
                 frase=frase+ str(coef[i])+"+"
