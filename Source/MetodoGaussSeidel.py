@@ -9,7 +9,6 @@ def gauss_seidel(A,B,X0):
     tamano = np.shape(A)
     n = tamano[0]
     m = tamano[1]
-    #  valores iniciales
     X = np.copy(X0)
     diferencia = np.ones(n, dtype=float)
     errado = 2*tolera
