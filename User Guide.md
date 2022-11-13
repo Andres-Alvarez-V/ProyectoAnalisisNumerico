@@ -1,7 +1,7 @@
 # Welcome to the user's guide.
 ## To use successfully our program you will have to follow the following steps:
 ### 1. Download.
-From this repository download the files.
+From this repository download the files or if you have _git_ use the command _git clone "https://github.com/Andres-Alvarez-V/ProyectoAnalisisNumerico"_
 ### 2. Library installation. 
 You will need to install these python libraries by using the commands written bellow in your terminal:
 - _pip install numpy_
