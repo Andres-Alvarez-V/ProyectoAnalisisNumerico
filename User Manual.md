@@ -1,4 +1,4 @@
-# Welcome to the user's guide.
+# Welcome to the user's manual.
 ## To use successfully our program you will have to follow the following steps:
 ### 1. Download.
 From this repository download the files or if you have _git_ use the command _git clone "https://github.com/Andres-Alvarez-V/ProyectoAnalisisNumerico"_
@@ -16,10 +16,13 @@ These methods will provide a solution of a linear equations system by usign diff
 1. The program will only work with one solution systems, wich means that you can only use a square matrix _A_ and a vector with the same size _b_.
 2. Fill in the information of the matrix and the vector as the program indicates.
 ### Numerical solution of a nonlinear equation.
-You wil
-To enter a function or a first or second derivative you will need to use the next operators:
+Fill in the information as the program indicates. To enter a function or a first or second derivative you will need to use the next operators:
 - Multiplication: _*_
 - Exponentiation: _** / ^_
 - Natural logarithm: _log()_
-- Exponential function: e()
-
+- Exponential function: e
+### Interpolation
+To do the interpolation enter the known values of _X_ and _Y_ vectors and fill in the information of the vectors as the program indicates.
+## WARNING
+- The program can only execute one method at time, if you need to use another one or the same method you will have to run the file again or use de command written above.
+- If you enter or use the methods in a way that was not described in this file or in the program we can not ensure that the methods will work as they should.
