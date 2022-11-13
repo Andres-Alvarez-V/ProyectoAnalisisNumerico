@@ -8,7 +8,7 @@
 - Python 3.*
 - Pip
 
-## How install
+## How to install
 Create a virtual environment acording to your operating system, then do as follows:
 
 ```bash
