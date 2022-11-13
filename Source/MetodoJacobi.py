@@ -44,6 +44,7 @@ def Jacobi(A,b,n=100,c=0.0001, x = None):
             count = count + 1
     else:
         return False
+    print( nx,  count, max(lc))
     return nx,  count, max(lc)
 
 
