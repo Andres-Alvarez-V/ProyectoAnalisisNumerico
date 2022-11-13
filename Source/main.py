@@ -30,7 +30,6 @@ def ingresar_funcion():
     #print(re.sub("[1-9]+x","[1-9]*x", user_input))
     expr = sympify(user_input)
     f = lambdify(x, expr)
-    print(f(1.5707963163023))
     return f
 def ingresar_funcion2():
     x = var('x')  # the possible variable names must be known beforehand...
