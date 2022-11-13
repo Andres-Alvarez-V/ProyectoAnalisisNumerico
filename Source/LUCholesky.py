@@ -1,10 +1,10 @@
-# Entradas:
-# A -> Matriz invertible
-# b -> Vector de constntes
+# inputs:
+# A -> Invertible Matrix 
+# b -> resources vector
 
 # Salidas:
-# x -> Vector solución
-# L, U -> Matrices de factorizacion
+# x -> solution
+# L, U -> decomposition 
 
 from math import sqrt
 import numpy as np
@@ -20,17 +20,17 @@ def cholesky(A,b):
             sum += (L[i][j] * U[j][i])
         L[i][i] = sqrt(abs(A[i][i] - sum))
         U[i][i] = L[i][i]
-        # Matriz U
+        # Matrix U
         for k in range(i, n):
-            # Producto Punto
+            # dot product
             sum = 0;
             for j in range(i):
                 sum += (L[k][j] * U[j][i])
             L[k][i] = (A[k][i] - sum)/U[i][i];
 
-        # Matriz L
+        # Matrix L
         for k in range(i, n):
-            # Producto Punto
+            # dot product
             sum = 0;
             for j in range(i):
                 sum += (L[i][j] * U[j][k]);
