@@ -24,7 +24,7 @@ from tabulate import tabulate
 
 def ingresar_funcion():
     x = var('x')  # the possible variable names must be known beforehand...
-    print(f"\nIngrese la función \n")
+    print(f"\nInsert the function \n")
     user_input = input("f(x) = ")
     user_input=user_input.replace("e","E")
     #print(re.sub("[1-9]+x","[1-9]*x", user_input))
@@ -33,7 +33,7 @@ def ingresar_funcion():
     return f
 def ingresar_funcion2():
     x = var('x')  # the possible variable names must be known beforehand...
-    print(f"\nIngrese la función \n")
+    print(f"\nInsert the function \n")
     user_input = input("g(x) = ")
     user_input=user_input.replace("e","E")
     #print(re.sub("[1-9]+x","[1-9]*x", user_input))
@@ -42,7 +42,7 @@ def ingresar_funcion2():
     return g
 def ingresar_derivada():
     x = var('x')  # the possible variable names must be known beforehand...
-    print(f"\nIngrese la derivada \n")
+    print(f"\nInsert the derivative \n")
     user_input = input("f'(x) = ")
     user_input=user_input.replace("e","E")
     #print(re.sub("[1-9]+x","[1-9]*x", user_input))
@@ -52,7 +52,7 @@ def ingresar_derivada():
 
 def ingresar_segunda_derivada():
     x = var('x')  # the possible variable names must be known beforehand...
-    print(f"\nIngrese la segunda derivada: \n")
+    print(f"\nInsert the second derivative: \n")
     user_input = input("f''(x) = ")
     user_input=user_input.replace("e","E")
     #print(re.sub("[1-9]+x","[1-9]*x", user_input))
@@ -64,21 +64,21 @@ def ingresar_segunda_derivada():
 
 
 def ingresar_matrizA():
-    print(f"\nMatriz A")
-    m = int(input(f"\nEntre el numero de filas: "))
-    n = int(input("Entre el numero de columnas: "))
-    print(f"Ingrese por filas, escribiendo los elementos separados por espacio\n")
+    print(f"\nMatrix A")
+    m = int(input(f"\nInsert the number of rows: "))
+    n = int(input("Insert the number of colums: "))
+    print(f"Insert by rows, writing the elements separated by spaces\n")
     A = []
     i=0
     while i<m:
         fila = list(map(float, input().split()))
         if len(fila)<m:
-            print(f"\nDeben ser valores reales, reintente\n")
+            print(f"\nIt must be real values, try again\n")
             i=0
             A=[]
         elif len(fila)>m:
 
-            print(f"\nDemasiados valores, reintente\n")
+            print(f"\nToo many values, try again\n")
             i=0
             A=[]
         else:
@@ -89,13 +89,13 @@ def ingresar_matrizA():
 
 def ingresar_vectorb():
     print(f"\nVector b\n")
-    n=int(input(f"Ingrese la dimension del vector "))
+    n=int(input(f"Insert the vector dimension "))
     Flag=True
     while Flag:
         b = np.array(list(map(float,
-                          input(f"\nIngrese el vector b tranpuesto: ").split())))
+                          input(f"\nInsert the vector b transposed: ").split())))
         if len(b)!=n:
-            print("\nReitente\n")
+            print("\nTry again\n")
             b=[]
         else:
             m=b.shape[0]
@@ -107,13 +107,13 @@ def ingresar_vectorb():
 
 def ingresar_vectorX():
     print(f"\nVector X\n")
-    n=int(input(f"Ingrese la dimension del vector "))
+    n=int(input(f"Insert the vector dimension"))
     Flag=True
     while Flag:
         b = np.array(list(map(float,
-                          input(f"\nIngrese los datos de X: ").split())))
+                          input(f"\nInsert the data of X ").split())))
         if len(b)!=n:
-            print("\nReitente\n")
+            print("\nTry again\n")
             b=[]
         else:
             return b
@@ -121,118 +121,118 @@ def ingresar_vectorX():
 
 def ingresar_vectorY():
     print(f"\nVector Y\n")
-    n=int(input(f"Ingrese la dimension del vector "))
+    n=int(input(f"Insert the vector dimension "))
     Flag=True
     while Flag:
         b = np.array(list(map(float,
-                          input(f"\nIngrese los datos de Y ").split())))
+                          input(f"\nInsert the data of Y ").split())))
         if len(b)!=n:
-            print("\nReitente\n")
+            print("\nTry again\n")
             b=[]
         else:
             return b
 def usuario():
-    print(f"\nHola!, bienvenido a nuestro programa\n")
+    print(f"\nHello!, welcome to our program\n")
     table = [
-    ["1.1 Crout","2.1 Pivoteo total","3.1 Gauss-Seidel","4.1 Biseccion","5.1 Vandermonde"],
-    ["1.2 Doolittle","2.2 Gauss simple ","3.2 Jacobi","4.2 Regla falsa"," "],
-    ["1.3 Cholesky"," "," ","4.3 Punto fijo"," "],
-    ["1.4 Gauss simple"," "," ","4.4 Newton"," "],
-    ["1.5 Gauss parcial " ," " ," " , "4.5 Secante", " "],
-    [" "," "," ","4.6 Raices múltiples"," "]
+    ["1.1 Crout","2.1 complete pivoting","3.1 Gauss-Seidel","4.1 Bisection","5.1 Vandermonde"],
+    ["1.2 Doolittle","2.2 Gauss-Jordan simple ","3.2 Jacobi","4.2 False position"," "],
+    ["1.3 Cholesky"," "," ","4.3 Fixed point"," "],
+    ["1.4 Gauss-jordan elimination"," "," ","4.4 Newton"," "],
+    ["1.5 Gauss-Jordan partial pivoting elimination " ," " ," " , "4.5 Secant", " "],
+    [" "," "," ","4.6 Multiple roots"," "]
     ]
-    print(tabulate(table, headers=["Factorizacion LU","Metodos directos", "Metodos iterativos", "Funciones", "Interpolacion"]))
-    print(f"Ingrese la opcion del método que desee \n \n")
-    n=float(input(f"Opcion "))
+    print(tabulate(table, headers=["LU factorization","Direct methods", "Iterative methods", "Functions", "Interpolation"]))
+    print(f"Insert the option of method you want \n \n")
+    n=float(input(f"Option "))
     print("   ")
     return n
 
 def elegir(n):
     if n == 1.1:
-        print("Bienvenido a Crout")
+        print("Welcome to Crout")
         A=ingresar_matrizA()
         b=ingresar_vectorb()
         crout(A,b)
     elif n == 1.2:
-        print("Bienvenido a Doolittle")
+        print("Welcome to Doolittle")
         A=ingresar_matrizA()
         b=ingresar_vectorb()
         doolittle(A,b)
 
     elif n == 1.3:
-        print("Bienvenido a Cholesky")
+        print("Welcome to Cholesky")
         A=ingresar_matrizA()
         b=ingresar_vectorb()
         cholesky(A,b)
 
     elif n == 1.4 :
-        print("Bienvenido a factorizacion gaussiana")
+        print("Welcome to Gaussian fatorization")
         A=ingresar_matrizA()
         b=ingresar_vectorb()
         lusimpl(A,b)
     elif n==1.5:
-        print("Bienvenido a factorizacion LU gaussiana parcial")
+        print("Welcome to partial Gaussian LU factorization")
         A=ingresar_matrizA()
         b=ingresar_vectorb()
         lupar(A,b)
 
 
     elif n == 2.1 :
-        print("Bienvenido a Pivoteo parcial")
+        print("Welcome to partial pivoting")
         A=ingresar_matrizA()
         b=ingresar_vectorb()
         pivoteo_parcial(A,b)
 
     elif n ==2.2 :
-        print("Bienvenido a simplificacion gaussiana simple")
+        print("Welcome to simple Gaussian simplification")
         A=ingresar_matrizA()
         b=ingresar_vectorb()
         gaussiana_simple(A,b)
 
     elif n == 3.1:
-        print("Bienvenido a Gauss-Seidel")
+        print("Welcome to Gauss-Seidel")
         A=ingresar_matrizA()
         b=ingresar_vectorb()
         gauss_seidel(A,b)
     elif n == 3.2:
-        print("Bienvenido a Jacobi")
+        print("Welcome to Jacobi")
         A=ingresar_matrizA()
         b=ingresar_vectorb()
         Jacobi(A,b)
     elif n == 4.1 :
-        print(f"Bienvenido a biseccion")
+        print(f"Welcome to bisection")
         f=ingresar_funcion()
         biseccion(f)
     elif n == 4.2:
-        print("Bienvenido a regla falsa")
+        print("Welcome to false position")
         f=ingresar_funcion()
         reglafalsa(f)
     elif n == 4.3:
-        print("Bienvenido a punto fijo")
+        print("Welcome to fixed point")
         f=ingresar_funcion2()
         puntofijo(f)
     elif n == 4.4 :
-        print("Bienvenido a newton")
+        print("Welcome to newton")
         f=ingresar_funcion()
         g=ingresar_funcion2()
         newton(f,g)
     elif n == 4.5:
-        print("Bienvenido a secante")
+        print("Welcome to secant")
         f=ingresar_funcion()
         secante(f)
     elif n == 4.6:
-        print("Bienvenido a raíces múltiples")
+        print("Welcome to multiple roots")
         f=ingresar_funcion()
         df=ingresar_derivada()
         d2f=ingresar_segunda_derivada()
         raices_multiples(f,df,d2f)
     elif n==5.1:
-        print("Bienvenido a Vandermonde")
+        print("Welcome to Vandermonde")
         X=ingresar_vectorX()
         Y=ingresar_vectorY()
         vandermonde(X,Y)
     else:
-        print("Opcion invalida, intente de nuevo")
+        print("Invalid option, try again")
         n=usuario()
         elegir(n)
 
