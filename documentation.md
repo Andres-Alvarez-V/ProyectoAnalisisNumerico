@@ -2,7 +2,7 @@
 
 # Documentation
 
-![Alt text](Images\MetodosNumerico.png?raw=true "Optional Title")
+![Alt text](https://github.com/Andres-Alvarez-V/ProyectoAnalisisNumerico/blob/main/Images/MetodosNumerico.png?raw=true "Optional Title")
 
 
 ## Numerical solution of nonlinear equations.
